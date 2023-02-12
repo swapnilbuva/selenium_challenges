@@ -29,43 +29,29 @@ public class browser {
 			System.out.println(x.getAttribute("id"));
 			if(x.getAttribute("id").equalsIgnoreCase(state))
 			{
-				x.click();
-				Thread.sleep(1000);
-				String text =driver.findElement(By.xpath("//ul[@class='breadcrumb']//li/span")).getText();
-				System.out.println("State :"+text);
-				String url = driver.getCurrentUrl();
-				System.out.println(url);
-				if(text.equalsIgnoreCase(state) && url.contains(state))
-				{
-					System.out.println("This is correct");
-				}
-				else
-				{
-					System.out.println("This is incorrect");
-				}
-				break;
+				System.out.println("This is correct");
 			}
 		}
-//		List<WebElement> state_map = driver.findElements(By.xpath("//*[local-name()='g' and @id='regions']/*[local-name()='g' and @id='" + state + "']"));
-//		System.out.println(state_map.size());
-//		if(state_map.size()>0)
-//		{
-//			state_map.get(0).click();
-//			Thread.sleep(10000);
-//			String text =driver.findElement(By.xpath("//ul[@class='breadcrumb']//li/span")).getText();
-//			System.out.println("State :"+text);
-//			String url = driver.getCurrentUrl();
-//			System.out.println(url);
-//			if(text.equalsIgnoreCase(state) && url.contains(state))
-//			{
-//				
-//				System.out.println("Correct");
-//			}
-//			else
-//			{
-//				System.out.println("Incorrect");
-//			}
-//		}
+		List<WebElement> state_map = driver.findElements(By.xpath("//*[local-name()='g' and @id='regions']/*[local-name()='g' and @id='" + state + "']"));
+		System.out.println(state_map.size());
+		if(state_map.size()>0)
+		{
+			state_map.get(0).click();
+			Thread.sleep(10000);
+			String text =driver.findElement(By.xpath("//ul[@class='breadcrumb']//li/span")).getText();
+			System.out.println("State :"+text);
+			String url = driver.getCurrentUrl();
+			System.out.println(url);
+			if(text.equalsIgnoreCase(state) && url.contains(state))
+			{
+				
+				System.out.println("Correct");
+			}
+			else
+			{
+				System.out.println("Incorrect");
+			}
+		}
 		driver.quit();
 	}
 
