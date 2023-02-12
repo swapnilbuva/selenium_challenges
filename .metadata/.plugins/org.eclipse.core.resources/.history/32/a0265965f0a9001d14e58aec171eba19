@@ -1,0 +1,14 @@
+package selenium_challenge_Naveen;
+
+public class website {
+
+	public static void main(String args[])
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\Users\ghs6kor\Desktop\Java\chromedriver.exe");
+	      WebDriver driver = new ChromeDriver();
+	      // wait of 5 seconds
+	      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	      driver.get("https://www.tutorialspoint.com/index.htm");
+	      // identify element
+	}
+}

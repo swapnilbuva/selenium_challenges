@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author swapn
+ *
+ */
+module selenium_challenge_Naveen {
+	requires org.seleniumhq.selenium.grid;
+}
