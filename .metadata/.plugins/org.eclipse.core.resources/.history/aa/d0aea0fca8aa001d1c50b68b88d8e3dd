@@ -28,7 +28,7 @@ public class browser {
 		if(state_map.size()>0)
 		{
 			state_map.get(0).click();
-			Thread.sleep(500);
+//			Thread.sleep(500);
 			String text =driver.findElement(By.xpath("//ul[@class='breadcrumb']//li/span")).getText();
 			System.out.println("State :"+text);
 			String url = driver.getCurrentUrl();
